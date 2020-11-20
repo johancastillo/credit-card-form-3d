@@ -1,18 +1,87 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import Card from './components/card/Card';
+
+import Visa from './img/logos/logo.svg';
+import Chip from './img/chip-tarjeta.png';
 
 class App extends Component{
+  constructor(){
+    super();
+    this.state = {
+      form: {}
+    }
+  }
+
   render(){
     return (
       <div className="contenedor">
   
       {/** Tarjeta */}
-      <Card />
+      <section className="tarjeta" id="tarjeta"
+            style={{
+                background: '#fff',
+                borderRadius: '12px'
+            }}>
+
+			<div class="delantera">
+				<div class="logo-marca" id="logo-marca">
+					<img src={Visa} alt="" /> 
+				</div>
+				<img src={Chip} class="chip" alt="" />
+				<div class="datos">
+					<div class="grupo" id="numero">
+						<p class="label">Número Tarjeta</p>
+						<p class="numero"
+                        style={{
+                            color: '#000'
+                        }}>
+                            #### #### #### ####
+                            </p>
+					</div>
+					<div class="flexbox">
+						<div class="grupo" id="nombre">
+							<p class="label">Nombre Tarjeta</p>
+							<p class="nombre"
+                            style={{
+                                color: '#000'
+                            }}>
+                                Johan Castillo
+                                </p>
+						</div>
+
+						<div class="grupo" id="expiracion">
+							<p class="label">Expiracion</p>
+							<p class="expiracion"
+                            style={{
+                                color: '#000'
+                            }}>
+                                <span class="mes">MM</span> / <span class="year">AA</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div className="trasera">
+				<div class="barra-magnetica"></div>
+				<div class="datos">
+					<div class="grupo" id="firma">
+						<p class="label">Firma</p>
+						<div class="firma"><p></p></div>
+					</div>
+					<div class="grupo" id="ccv">
+						<p class="label">CCV</p>
+						<p class="ccv"></p>
+					</div>
+				</div>
+				<p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem, voluptates illo.</p>
+				<a href="compralotodo.com" class="link-banco">www.tubanco.com</a>
+			</div>
+		</section>
   
       {/** Contenedor Boton Abrir Formulario */}
       <div class="contenedor-btn">
-        <button class="btn-abrir-formulario" id="btn-abrir-formulario">
+        <button onClick={() => alert("Open form")} 
+        class="btn-abrir-formulario" id="btn-abrir-formulario">
           <i class="fas fa-plus"></i>
         </button>
       </div>

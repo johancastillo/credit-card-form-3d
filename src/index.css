@@ -1,3 +1,8 @@
+:root{
+  --color-one: #faa42c;
+  --color-two: #000;
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -50,7 +55,7 @@ body {
 
 .tarjeta .delantera {
 	width: 100%;
-	background: url(./img/bg-tarjeta/martriz.svg);
+	background: url(./img/bg-tarjeta/matriz.svg);
 	background-size: cover;
 }
 
@@ -60,7 +65,7 @@ body {
 }
 
 .delantera .logo-marca img {
-	width: 178px;
+	width: 200px;
 	height: 100%;
 	/** object-fit: cover; **/
 	/** max-width: 80px; **/
@@ -94,7 +99,7 @@ body {
 
 /* ---------- Tarjeta Trasera ----------*/
 .trasera {
-	background: url(./img/bg-tarjeta/bg-tarjeta-02.jpg);
+	background: url(./img/bg-tarjeta/matriz.svg);
 	background-size: cover;
 	position: absolute;
 	top: 0;
@@ -167,7 +172,7 @@ body {
 	height: 50px;
 	font-size: 20px;
 	line-height: 20px;
-	background: #2364d2;
+	background: var(--color-one);
 	color: #fff;
 	position: relative;
 	top: -25px;
@@ -181,7 +186,7 @@ body {
 }
 
 .contenedor-btn .btn-abrir-formulario:hover {
-	background: #1850b1;
+	background: var(--color-two);
 }
 
 .contenedor-btn .btn-abrir-formulario.active {
