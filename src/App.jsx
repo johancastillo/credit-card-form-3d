@@ -8,7 +8,7 @@ class App extends Component{
   constructor(){
     super();
     this.state = {
-      form: {}
+      booton: "contenedor-btn active" 
     }
   }
 
@@ -79,7 +79,7 @@ class App extends Component{
 		</section>
   
       {/** Contenedor Boton Abrir Formulario */}
-      <div class="contenedor-btn">
+      <div class="contenedor-btn active">
         <button onClick={() => alert("Open form")} 
         class="btn-abrir-formulario" id="btn-abrir-formulario">
           <i class="fas fa-plus"></i>
