@@ -50,7 +50,7 @@ body {
 
 .tarjeta .delantera {
 	width: 100%;
-	background: url(./img/bg-tarjeta/bg-tarjeta-02.jpg);
+	background: url(./img/bg-tarjeta/martriz.svg);
 	background-size: cover;
 }
 
@@ -60,10 +60,10 @@ body {
 }
 
 .delantera .logo-marca img {
-	width: 100%;
+	width: 178px;
 	height: 100%;
-	object-fit: cover;
-	max-width: 80px;
+	/** object-fit: cover; **/
+	/** max-width: 80px; **/
 }
 
 .delantera .chip {

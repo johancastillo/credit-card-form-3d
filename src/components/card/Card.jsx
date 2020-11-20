@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
 import './Card.css';
 
-import Visa from './../../img/logos/visa.png';
+import Visa from './../../img/logos/logo.svg';
 import Chip from './../../img/chip-tarjeta.png';
 
 class Card extends Component{
     render(){
         return (
-            <section className="tarjeta" id="tarjeta">
+            <section className="tarjeta" id="tarjeta"
+            style={{
+                background: '#fff'
+            }}>
+
 			<div class="delantera">
 				<div class="logo-marca" id="logo-marca">
 					<img src={Visa} alt="" /> 
@@ -16,17 +20,31 @@ class Card extends Component{
 				<div class="datos">
 					<div class="grupo" id="numero">
 						<p class="label">Número Tarjeta</p>
-						<p class="numero">#### #### #### ####</p>
+						<p class="numero"
+                        style={{
+                            color: '#000'
+                        }}>
+                            #### #### #### ####
+                            </p>
 					</div>
 					<div class="flexbox">
 						<div class="grupo" id="nombre">
 							<p class="label">Nombre Tarjeta</p>
-							<p class="nombre">Johan Castillo</p>
+							<p class="nombre"
+                            style={{
+                                color: '#000'
+                            }}>
+                                Johan Castillo
+                                </p>
 						</div>
 
 						<div class="grupo" id="expiracion">
 							<p class="label">Expiracion</p>
-							<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+							<p class="expiracion"
+                            style={{
+                                color: '#000'
+                            }}>
+                                <span class="mes">MM</span> / <span class="year">AA</span></p>
 						</div>
 					</div>
 				</div>
